@@ -6,9 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 
   const tail = function (arr) {
-    for (let i = 0; i < arr.length; i++){
-      return arr.length && arr.splice(0,1);
-    }
+    return arr.length && arr.slice(0,1);
   };
 
   //correct answer:
