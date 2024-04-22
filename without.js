@@ -22,9 +22,9 @@ assertArraysEqual([1,2,3], [1,2]);
 
 const without = function(source, itemsToRemove) {
   for (let i = 0; i < source.length; i++) {
-    for (let j = i + 1; j < itemsToRemove.length; j++) {
+    for (let j = 0; j < itemsToRemove.length; j++) {
       if (source[i] !== itemsToRemove[j]) {
-        return [i];
+        return [source[i]];
       }
     }
   }
