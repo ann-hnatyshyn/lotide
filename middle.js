@@ -17,8 +17,16 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const flatten = function(arr) {
- return (arr.flat(Infinity));
+const middle = function(arr1) {
+  if (arr1.length <= 2) {
+    return [];
+  } else if (arr1.length % 2 !== 0) {
+    let midIndex = Math.floor(arr1.length / 2);
+    return [arr1[midIndex]];
+  } else {
+    let midIndex1 = arr1.length / 2 - 1;
+    let midIndex2 = arr1.length / 2;
+    return [arr1[midIndex1], arr1[midIndex2]];
+  }
 };
-
-flatten([1, 2, [3, 4], 5, [6]]);
+console.log(middle([1, 2, 3, 4, 5]));
