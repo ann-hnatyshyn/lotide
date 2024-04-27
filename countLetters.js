@@ -7,17 +7,8 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const sentence = "lighthouse labs rocks";
-
-const countLetters = function() {
-  const result = {};
-  for (let letter = 0; letter < sentence.length; letter++) {
-    if (letter ) {
-      return result[letter] += 1;
-    }
-    return result[letter];
-  }
-};
-
-console.log(countLetters(sentence));
+const string = "lighthouse labs rocks";
+for (const x of string) {
+  console.log(x);
+}
 
