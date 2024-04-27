@@ -16,9 +16,7 @@ const countOnly = function(allItems, itemsToCount) {
           count += 1;
         }
       }
-      if (count === 0) {
-        results[key] = undefined;
-      } else {
+      if (count > 0) {
         results[key] = count;
       }
     }
