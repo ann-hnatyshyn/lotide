@@ -14,37 +14,26 @@ const letterPositions = function(sentence) {
 };
 
 console.log(letterPositions(sentence));
-// {
-// "l":[0],
-// i:[1],
-// g:[2],
-// h:[3,5],
-// t:[],
-// o:[],
-// u:[],
-// s:[],
-// e:[],
-// }
 
 
 
-// const eqArrays = function(arr1, arr2) {
-//   for (let i = 0; i < arr1.length; i++) {
-//     if (arr1[i] !== arr2[i]) {
-//       return false;
-//     }
-//   } if (arr1.length === arr2.length) {
-//     return true;
-//   }
-// };
+const eqArrays = function(arr1, arr2) {
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  } if (arr1.length === arr2.length) {
+    return true;
+  }
+};
 
-// // const assertArraysEqual = function(arr1, arr2) {
-//   if (eqArrays(arr1, arr2)) {
-//     console.log(`✅ Assertion Passed: ${arr1} === ${arr2}`);
-//   } else {
-//     console.log(`❌ Assertion Failed: ${arr1} !== ${arr2}`);
-//   }
-// // };
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
+    console.log(`✅ Assertion Passed: ${arr1} === ${arr2}`);
+  } else {
+    console.log(`❌ Assertion Failed: ${arr1} !== ${arr2}`);
+  }
+};
 
 
-// assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions("hello").e, [1]);
