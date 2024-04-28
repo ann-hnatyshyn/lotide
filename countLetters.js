@@ -7,12 +7,12 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const string = "lighthouse labs rocks";
+const string = "Lighthouse Labs Rocks!";
 
-const countLetters = function() {
+const countLetters = function(string) {
   const result = {};
   for (const letter of string) {
-    if (letter !== "") {
+    if (letter !== " ") {
       result[letter] = (result[letter] || 0) + 1;
     }
   }
