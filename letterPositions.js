@@ -1,35 +1,50 @@
-const letterPositions = function(string2) {
+const sentence = "lighthouse";
+
+const letterPositions = function(sentence) {
   const results = {};
-  const count = 0;
-  for (const item of string2) {
-    console.log(item);
-  }
-};
-
-
-const eqArrays = function(arr1, arr2) {
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
+  for (let i = 0; i < sentence.length; i++) {
+    const letter = sentence[i];
+    if (results[letter] === undefined) {
+      results[letter] = [i];
+    } else {
+      results[letter].push(i);
     }
   }
-  if (arr1.length === arr2.length) {
-    return true;
-  }
+  return results;
 };
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3]));
+console.log(letterPositions(sentence));
+// {
+// "l":[0],
+// i:[1],
+// g:[2],
+// h:[3,5],
+// t:[],
+// o:[],
+// u:[],
+// s:[],
+// e:[],
+// }
 
-const string2 = "hello";
 
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
-assertArraysEqual([1,2,3], [1,2,3]);
-assertArraysEqual([1,2,3], [1,2]);
 
-assertArraysEqual(letterPositions("hello").e, [1]);
+// const eqArrays = function(arr1, arr2) {
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false;
+//     }
+//   } if (arr1.length === arr2.length) {
+//     return true;
+//   }
+// };
+
+// // const assertArraysEqual = function(arr1, arr2) {
+//   if (eqArrays(arr1, arr2)) {
+//     console.log(`✅ Assertion Passed: ${arr1} === ${arr2}`);
+//   } else {
+//     console.log(`❌ Assertion Failed: ${arr1} !== ${arr2}`);
+//   }
+// // };
+
+
+// assertArraysEqual(letterPositions("hello").e, [1]);

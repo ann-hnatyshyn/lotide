@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const string = "Lighthouse Labs Rocks!";
+const string = "Lighthouse in the house";
 
 const countLetters = function(string) {
   const result = {};
@@ -20,3 +20,7 @@ const countLetters = function(string) {
 };
 
 console.log(countLetters(string));
+
+assertEqual(countLetters['l'], 1);
+assertEqual(countLetters['i'], 2);
+assertEqual(countLetters['g'], 1);
