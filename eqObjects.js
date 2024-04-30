@@ -25,7 +25,6 @@ const assertEqual = function(actual, expected) {
 const eqObjects = function(shirtObject, anotherShirtObject) {
   const keys = Object.keys(shirtObject);
   for (const value of keys) {
-    Array.isArray(keys);
     if (shirtObject[value] !== anotherShirtObject[value]) {
       return false;
     }
