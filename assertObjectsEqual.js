@@ -1,7 +1,6 @@
 const eqObjects = function(actual, expected) {
   const keys = Object.keys(actual);
   for (const value of keys) {
-    Array.isArray(keys);
     if (actual[value] !== expected[value]) {
       return false;
     }
@@ -9,16 +8,21 @@ const eqObjects = function(actual, expected) {
   return true;
 };
 
+//Array.isArray(keys);
+
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require("util").inspect;
   if (eqObjects(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`✅ Assertion Passed: ${inspect(actual)}`);
+  } else {
+    console.log(`❌ Assertion Failed: ${inspect(expected)}`);
   }
-  console.log(`Example label: ${inspect(actual)}`);
 };
 
-console.log(assertObjectsEqual);
+console.log(assertObjectsEqual());
 
-assertObjectsEqual({ a: '1', b: 2});
-assertObjectsEqual({ b: 2, a: '1' });
+const actual = { a: '1', b: 2};
+const expected = { b: 2, a: '1' };
+
+assertObjectsEqual(actual);
+assertObjectsEqual(expected);
