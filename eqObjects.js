@@ -26,7 +26,7 @@ const eqObjects = function(shirtObject, anotherShirtObject) {
   const keys = Object.keys(shirtObject);
   for (const value of keys) {
     Array.isArray(keys);
-    if (shirtObject !== anotherShirtObject) {
+    if (shirtObject[value] !== anotherShirtObject[value]) {
       return false;
     }
   }
