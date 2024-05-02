@@ -18,9 +18,20 @@ const results1 = map(words, (word) => word[0]);
 
 //console.log(results1);
 
+const assertArraysEqual = function(arr1, arr2) {
+  if (map(arr1, arr2)) {
+    console.log(`✅ Assertion Passed: ${arr1} === ${arr2}`);
+  } else {
+    console.log(`❌ Assertion Failed: ${arr1} !== ${arr2}`);
+  }
+};
+
+//console.log(assertArraysEqual(words, results1));
+
+
 const numbers = [1, 2, 3, 4, 5];
 const results2 = map(numbers, (num) => num * 2);
 //console.log(results2); // Expected output: [2, 4, 6, 8, 10]
 
 const stringLengths = map(["hello", "world", "Javascript", "fun"], (str) => str.length);
-console.log(stringLengths); // Expected output: [5, 5, 10, 3]
+//console.log(stringLengths); // Expected output: [5, 5, 10, 3]
