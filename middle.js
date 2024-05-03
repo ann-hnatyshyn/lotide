@@ -1,3 +1,6 @@
+const arr1 = [1, 2, 3, 4];
+const arr2 = [1, 2, 3, 4, 5, 6];
+
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -30,3 +33,7 @@ const middle = function(arr1) {
   }
 };
 console.log(middle([1, 2, 3, 4, 5]));
+
+assertArraysEqual(middle([1, 2, 3, 4], [2,3]));
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6], [3,4]));
+assertArraysEqual(middle([1, 2, 3, 4, 5], [3]));
