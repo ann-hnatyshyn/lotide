@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-findKey(
+const starObject = (
   {
     "Blue Hill": { stars: 1 },
     Akaleri: { stars: 3 },
@@ -14,8 +14,8 @@ findKey(
     elBulli: { stars: 3 },
     Ora: { stars: 2 },
     Akelarre: { stars: 3 },
-  },
-  (x) => x.stars === 2
+  }
+  // (x) => x.stars === 2
 ); // => "noma"
 
 //✅Implement the function findKey which takes in an object and a callback.
@@ -25,11 +25,16 @@ findKey(
 
 
 const findKey = function(object, callback) {
-  for (const x in object) {
-    if (x === true) {
-      return x;
+  const keys = Object.values(starObject); //turned object into an array
+  for (let i = 0; i < keys.length; i++) {
+    if (callback(i)) {
+      return keys[i];
     }
   }
-  return undefined;
 };
 
+const returnFirstKey = (x) => {
+  return (x === 2);
+};
+
+console.log(findKey(starObject, returnFirstKey));
