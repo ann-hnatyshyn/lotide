@@ -1,5 +1,5 @@
 const assertEqual = require("../assertEqual");
 
-assertEqual([5, 6, 7]), 5;
-assertEqual(["Hello", "Lighthouse", "Labs"]), "Goodbye";
+assertEqual("hello", "hello");
+assertEqual("The sky is blue", "The sky is green");
 
