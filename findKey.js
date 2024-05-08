@@ -24,17 +24,19 @@ const starObject = (
 //If no key is found, then it should return undefined.
 
 const findKey = function(object, callback) {
-  const key = Object.keys(starObject); //turned object into an array
-  for (let i = 0; i < key.length; i++) {
-    if (callback(key[i])) {
-      return key[i];
+  const key = Object.keys(object);
+  const value = Object.values(object); //turned object into an array
+  for (let i = 0; i < value.length; i++) {
+    if (callback(value[i])) {
+      return (key);
     }
+  }
   }
   return undefined;
 };
 
 const returnFirstKey = (x) => {
-  return (x === "elBulli");
+  return (x === "stars: 3");
 };
 
 console.log(findKey(starObject, returnFirstKey));
