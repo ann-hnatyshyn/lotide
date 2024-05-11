@@ -1,12 +1,12 @@
 {
-  "name": "test",
+  "name": "@annhnatyshyn/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "lotide",
+  "description": "lighthouse labs lotide project",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": "annhnatyshyn",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.1",
