@@ -1,4 +1,5 @@
 const tail = require("../tail.js");
+const assert = require('chai').assert;
 const assertEqual = require("../assertEqual");
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
