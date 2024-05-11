@@ -8,7 +8,11 @@ const eqObjects = function(actual, expected) {
   return true;
 };
 
+const actual = {a:1, b:2, c:3};
+const expected = {a:1, b:2, c:3};
+
 //Array.isArray(keys);
+
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require("util").inspect;
@@ -19,10 +23,4 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-console.log(assertObjectsEqual());
-
-const actual = { a: '1', b: 2};
-const expected = { b: 2, a: '1' };
-
-assertObjectsEqual(actual);
-assertObjectsEqual(expected);
+console.log(assertObjectsEqual(actual,expected));
