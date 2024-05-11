@@ -11,8 +11,6 @@ const eqObjects = function(actual, expected) {
 const actual = {a:1, b:2, c:3};
 const expected = {a:1, b:2, c:3};
 
-//Array.isArray(keys);
-
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require("util").inspect;
