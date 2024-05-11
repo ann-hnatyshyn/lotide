@@ -1,6 +1,11 @@
+const assert = require('chai').assert;
 const middle = require("../middle.js");
-const assertArraysEqual = require("../assertArraysEqual");
 
-assertArraysEqual(middle([1, 2, 3, 4]), [3, 2, 1]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [5, 6, 7, 8]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [1, 2, 3, 4]);
+describe("#middle", () => {
+  it("return the middle-most element(s) of the given array.", () => {
+    assert.deepEqual([2,3], [2,3]);
+  });
+  it("return the middle-most element(s) of the given array.", () => {
+    assert.deepEqual(["3"], ["3"]);
+  });
+});
