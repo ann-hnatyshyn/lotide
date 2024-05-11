@@ -18,7 +18,7 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 const flatten = function(arr) {
- return (arr.flat(Infinity));
+  return (arr.flat(Infinity));
 };
 
 flatten([1, 2, [3, 4], 5, [6]]);
