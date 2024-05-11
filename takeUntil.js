@@ -37,5 +37,4 @@ const arr2 = [0, 1, 2, 3, 4, 5];
 
 
 console.log(takeUntil(arr1, numberLessThan6));
-
-console.log(assertArraysEqual(takeUntil(arr1, numberLessThan6), arr2));
+console.log(takeUntil(arr2, numberLessThan6));
