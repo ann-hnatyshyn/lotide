@@ -1,3 +1,5 @@
+const eqObjects = require('./eqObjects');
+
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require("util").inspect;
   if (eqObjects(actual, expected)) {
@@ -22,7 +24,7 @@ module.exports = assertObjectsEqual;
 //   return true;
 // };
 
-// const actual = {a:1, b:2, c:3};
-// const expected = {a:1, b:2, c:3};
+// // const actual = {a:1, b:2, c:3};
+// // const expected = {a:1, b:2, c:3};
 
 
